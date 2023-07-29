@@ -5,4 +5,8 @@
     <select id="getRandomWord" resultType="com.java.spanish.vo.WordVo">
         SELECT * FROM (SELECT * FROM words ORDER BY DBMS_RANDOM.RANDOM) WHERE ROWNUM = 1
     </select>
+    
+    <update id="updateWordCheck" parameterType="int">
+    	UPDATE WORDS SET IS_CHECKED = 1 WHERE WORD_ID = #{wordId} 
+    </update>
 </mapper>

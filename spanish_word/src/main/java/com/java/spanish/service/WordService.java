@@ -15,4 +15,8 @@ public class WordService {
     public WordVo getRandomWord() {
         return wordMapper.getRandomWord();
     }
+
+	public void updateWordCheck(int wordId) {
+		wordMapper.updateWordCheck(wordId);
+	}
 }

@@ -3,6 +3,7 @@ package com.java.spanish.api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.java.spanish.service.WordService;
@@ -18,5 +19,10 @@ public class RandomWordController {
     @GetMapping("/random-word")
     public WordVo getRandomWord() {
         return wordService.getRandomWord();
+    }
+
+    @PostMapping("/check-word")
+    public void updateWordCheck(int wordId) {
+    	wordService.updateWordCheck(wordId);
     }
 }

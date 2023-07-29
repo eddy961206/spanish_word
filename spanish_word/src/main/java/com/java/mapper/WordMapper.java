@@ -7,4 +7,6 @@ import com.java.spanish.vo.WordVo;
 @Mapper
 public interface WordMapper {
     public WordVo getRandomWord();
+
+	public void updateWordCheck(int wordId);
 }
